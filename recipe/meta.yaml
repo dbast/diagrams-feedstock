@@ -13,11 +13,11 @@ build:
   number: 1
 
 requirements:
+  build:
+    - posix  # [win]
   host:
     - pip
     - python
-  build:
-    - posix  # [win]
   run:
     - python-graphviz >=0.13.2,<0.14.0
     - jinja2 >=2.10,<3.0
