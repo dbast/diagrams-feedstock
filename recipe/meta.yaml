@@ -10,10 +10,11 @@ source:
   sha256: ebaeaf89feda1059cadf4434f7c6d3899edb1bb21cef9a98b3d519f3da925510
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
 
 requirements:
+  build:
+    - posix  # [win]
   host:
     - pip
     - python
