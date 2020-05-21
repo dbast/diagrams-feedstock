@@ -11,12 +11,13 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - python
+  build:
+    - posix  # [win]
   run:
     - python-graphviz >=0.13.2,<0.14.0
     - jinja2 >=2.10,<3.0
