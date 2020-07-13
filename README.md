@@ -5,7 +5,7 @@ Home: https://diagrams.mingrammer.com
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Diagram as Code
 
