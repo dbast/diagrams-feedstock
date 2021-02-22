@@ -19,10 +19,10 @@ requirements:
     - pip
     - python
   run:
-    - python-graphviz >=0.13.2,<0.14.0
+    - python-graphviz >=0.13.2,<0.17.0
     - jinja2 >=2.10,<3.0
     - python
-    - contextvars >=2.4,<3.0  # [py36]
+    - contextvars >=2.4,<3.0  # [py<37]
 
 test:
   imports:
