@@ -10,19 +10,19 @@ source:
   sha256: a50743ed9274e194e7898820f69aa12868ae217003580ef9e7d0285132c9674a
 
 build:
-  number: 0
-
+  number: 1
+  noarch: python
+  script:
+    - $PYTHON -m pip install . -vv
+    - cp -r $SRC_DIR/resources $SP_DIR/resources
 requirements:
-  build:
-    - posix  # [win]
   host:
     - pip
-    - python
+    - python >=3.7
   run:
     - python-graphviz >=0.13.2,<0.17.0
     - jinja2 >=2.10,<3.0
-    - python
-    - contextvars >=2.4,<3.0  # [py<37]
+    - python >=3.7
 
 test:
   imports:
