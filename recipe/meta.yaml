@@ -17,12 +17,13 @@ build:
     - cp -r $SRC_DIR/resources $SP_DIR/resources
 requirements:
   host:
+    - python >=3.7
     - pip
-    - python >=3.7
   run:
-    - python-graphviz >=0.13.2,<0.20.0
-    - jinja2 >=2.10,<4.0
     - python >=3.7
+    - jinja2 >=2.10,<4.0
+    - python-graphviz >=0.13.2,<0.21.0
+    - typed-ast >=2.5.4
 
 test:
   imports:
@@ -36,6 +37,10 @@ test:
     - diagrams.k8s
     - diagrams.oci
     - diagrams.onprem
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://diagrams.mingrammer.com
