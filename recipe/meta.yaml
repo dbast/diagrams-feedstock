@@ -1,5 +1,5 @@
 {% set name = "diagrams" %}
-{% set version = "0.23.4" %}
+{% set version = "0.24.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b7ada0b119b5189dd021b1dc1467fad3704737452bb18b1e06d05e4d1fa48ed7
+  sha256: 47b77a0e4dac926a095ff2ae4dd4ec1a192be781799befc660a8f5ce6ea1052f
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - python >=3.7
     - jinja2 >=2.10,<4.0
     - python-graphviz >=0.13.2,<0.21.0
-    - typed-ast >=1.5.4,<2.0.0
+    - typed-ast >=1.5.5,<2.0.0
 
 test:
   imports:
