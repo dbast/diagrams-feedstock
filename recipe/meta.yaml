@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 47b77a0e4dac926a095ff2ae4dd4ec1a192be781799befc660a8f5ce6ea1052f
 
 build:
@@ -17,10 +17,11 @@ build:
     - cp -r $SRC_DIR/resources $SP_DIR/resources
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - jinja2 >=2.10,<4.0
     - python-graphviz >=0.13.2,<0.21.0
     - typed-ast >=1.5.5,<2.0.0
@@ -38,6 +39,7 @@ test:
     - diagrams.oci
     - diagrams.onprem
   requires:
+    - python {{ python_min }}
     - pip
   commands:
     - pip check
