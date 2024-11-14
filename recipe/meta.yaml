@@ -19,7 +19,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - poetry-core
   run:
     - python >={{ python_min }}
     - jinja2 >=2.10,<4.0
