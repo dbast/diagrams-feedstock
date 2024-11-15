@@ -1,0 +1,24 @@
+From 3d13512396feda88841139d05ba75ecaf39afd74 Mon Sep 17 00:00:00 2001
+From: Daniel Bast <2790401+dbast@users.noreply.github.com>
+Date: Fri, 15 Nov 2024 15:43:25 +0100
+Subject: [PATCH] Set packages
+
+---
+ pyproject.toml | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 46957ee..b03a74e 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -8,6 +8,7 @@ readme = "README.md"
+ homepage = "https://diagrams.mingrammer.com"
+ repository = "https://github.com/mingrammer/diagrams"
+ include = ["resources/**/*"]
++packages = [{ include = "diagrams" }]
+ 
+ [tool.poetry.scripts]
+ diagrams="diagrams.cli:main"
+-- 
+2.47.0
+
